@@ -3,34 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code editor</title>
+    <title>Code Editor</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <section class="conainer">
-        <h1>Code editor🧑‍💻</h1>
-
+    <section class="container">
+        <h1>Code Editor 🧑‍💻</h1>
         <div class="editor">
             <div class="left">
                 <label><i class='bx bxl-html5'></i>HTML</label>
-                <textarea spellcheck="false" id="html-code">
-                </textarea>
-
-                <label><i class='bx bxl-css3' ></i>CSS</label>
-                <textarea spellcheck="false" id="css-code"></textarea>
-
-                
-                <label><i class='bx bxl-javascript' ></i>Javascript</label>
-                <textarea spellcheck="false" id="js-code"></textarea>
+                <textarea id="html-code" onkeyup="run()" spellcheck="false"></textarea>
+                <label><i class='bx bxl-css3'></i>CSS</label>
+                <textarea id="css-code" onkeyup="run()" spellcheck="false"></textarea>
+                <label><i class='bx bxl-javascript'></i>JavaScript</label>
+                <textarea id="js-code" onkeyup="run()" spellcheck="false"></textarea>
             </div>
-
             <div class="right">
-                <label><i class='bx bx-play-circle' ></i>Output</label>
-                <iframe id="output"></iframe>
+                <label><i class='bx bx-play-circle'></i>Output</label> 
+                <iframe id="output" sandbox="allow-scripts"></iframe>
             </div>
         </div>
     </section>
-    
 </body>
 </html>
